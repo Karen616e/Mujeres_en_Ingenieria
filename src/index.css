@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+/* Paleta del proyecto: se usan como clases de Tailwind (bg-primario, text-secundario, etc.) */
+@theme {
+  --color-primario: #7b2cbf;
+  --color-secundario: #c77dff;
+  --color-fondo: #0b0b12;
+  --color-texto: #ffffff;
+  --font-sans: 'Segoe UI', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    min-height: 100vh;
+    color: var(--color-texto);
+    /* Resplandor morado arriba, negro abajo */
+    background: radial-gradient(circle at top, #46246a 0%, var(--color-fondo) 60%) no-repeat fixed;
+  }
+}
