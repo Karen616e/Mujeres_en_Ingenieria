@@ -1,3 +1,4 @@
+
 import { Link, NavLink } from 'react-router-dom'
 import logo from '@/assets/logo.jpg'
 
@@ -12,16 +13,27 @@ const enlaces = [
 
 export default function NavigationMain() {
   return (
-    <nav className="relative flex min-h-[144px] items-center justify-center bg-primario px-6 py-3">
-      <div className="relative z-10 flex gap-6">
+    <nav className="flex flex-wrap items-center justify-center gap-6 bg-gradient-to-r from-primario via-[#71378f] to-[#a46cc8] px-6 py-5 shadow-lg lg:justify-between">
+
+      <Link to="/" aria-label="Ir al inicio">
+        <img
+          src={logo}
+          alt="Logo Mujeres en Computación"
+          className="h-20 rounded-xl bg-white p-1 shadow-md transition-transform duration-300 hover:scale-105"
+        />
+      </Link>
+
+      <div className="flex flex-wrap items-center justify-center gap-3">
         {enlaces.map(({ to, label }) => (
           <NavLink
             key={to}
             to={to}
             end
             className={({ isActive }) =>
-              `rounded-lg px-[1.4rem] py-[0.8rem] text-[1.4rem] font-semibold transition-colors duration-200 ${
-                isActive ? 'bg-white text-primario' : 'text-white hover:bg-secundario'
+              `rounded-xl border px-4 py-3 text-sm font-semibold transition-all duration-300 ${
+                isActive
+                  ? 'border-white bg-white text-primario shadow-md'
+                  : 'border-white/30 bg-white/10 text-white hover:bg-white/25 hover:shadow-md'
               }`
             }
           >
@@ -29,14 +41,6 @@ export default function NavigationMain() {
           </NavLink>
         ))}
       </div>
-
-      <Link
-        to="/"
-        aria-label="Ir al inicio"
-        className="absolute left-6 top-1/2 block -translate-y-1/2 hover:opacity-85"
-      >
-        <img src={logo} alt="Logo Mujeres en Computación" className="block h-[100px] rounded-md" />
-      </Link>
     </nav>
   )
 }
