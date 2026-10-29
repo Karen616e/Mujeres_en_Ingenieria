@@ -1,11 +1,21 @@
+
+
+
+
 @import 'tailwindcss';
 
-/* Paleta del proyecto: se usan como clases de Tailwind (bg-primario, text-secundario, etc.) */
 @theme {
-  --color-primario: #7b2cbf;
-  --color-secundario: #c77dff;
-  --color-fondo: #0b0b12;
-  --color-texto: #ffffff;
+  --color-primario: #35145F;
+  --color-secundario: #854CE6;
+  --color-rosa: #F18CD1;
+  --color-azul: #75C8F7;
+  --color-violeta: #854CE6;
+  --color-lila: #DAC5FF;
+  --color-lila-claro: #F1E8FF;
+  --color-fondo: #FBF8FF;
+  --color-texto: #35145F;
+  --color-morado-oscuro: #35145F;
+
   --font-sans: 'Segoe UI', system-ui, sans-serif;
 }
 
@@ -13,8 +23,12 @@
   body {
     min-height: 100vh;
     color: var(--color-texto);
-    /* Resplandor morado arriba, negro abajo */
-    background: radial-gradient(circle at top, #46246a 0%, var(--color-fondo) 60%) no-repeat fixed;
+    background: linear-gradient(
+      135deg,
+      #F1E8FF 0%,
+      #FBF8FF 55%,
+      #FDEAF7 100%
+    ) fixed;
   }
 }
 
