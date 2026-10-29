@@ -32,37 +32,75 @@
   }
 }
 
-/* Botones con degradado */
-.boton-cosmico {
-  background: linear-gradient(
-    120deg,
-    #854CE6,
-    #BD65D6,
-    #F18CD1
-  );
-  color: white;
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  margin: 2rem auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
   border-radius: 12px;
-  padding: 12px 24px;
-  font-weight: 600;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.boton-cosmico:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px #854CE640;
+.fotos-grupo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 92vw;
+  max-width: 1700px;
+  margin: 2rem 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Tarjetas */
-.tarjeta-cosmica {
-  background: #FFFFFF;
-  border: 1px solid #DAC5FF;
-  border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 5px 20px #35145F10;
-  transition: transform 0.3s, box-shadow 0.3s;
+.fotos-grupo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.tarjeta-cosmica:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px #854CE630;
+.lista-que-hacemos {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
 }
+
+@media (max-width: 700px) {
+  .fotos-grupo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/****** FOOTER ******/
+.footer {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cfcfe0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer p {
+  margin: 0.25rem 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #c77dff;
+}
+/****** END FOOTER ******/
