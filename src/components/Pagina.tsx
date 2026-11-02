@@ -8,7 +8,7 @@ type PaginaProps = {
 
 export default function Pagina({ titulo, children }: PaginaProps) {
   return (
-    <div className="mx-auto max-w-[1000px] px-6 pb-16">
+    <div className="mx-auto w-full max-w-[1350px] px-4 pb-16">
       <div className="mb-10 mt-16 text-center">
 
         <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold leading-normal text-primario">
@@ -28,3 +28,4 @@ export default function Pagina({ titulo, children }: PaginaProps) {
     </div>
   )
 }
+
