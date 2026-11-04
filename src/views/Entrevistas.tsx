@@ -10,7 +10,7 @@ const entrevistas: Entrevista[] = [
   { id: 'I7VZgMqzbvc', titulo: 'Entrevista con la Dra. Ofelia Cervantes' },
   { id: 'vSjb0aB5ghg', titulo: 'Entrevista con la Dra. Laura Cruz' },
   { id: 'Jr096eWp7y8', titulo: 'Entrevista a la Dra. Rocío Aldeco Pérez' },
-  { id: 'vE8srMaGZdQ', titulo: 'Entrevista con la Dra. (nombre)' },
+  { id: 'vE8srMaGZdQ', titulo: 'Entrevista con la Dra. Rosa María Valdovinos Rosas' },
 ]
 
 export default function Entrevistas() {
@@ -32,7 +32,7 @@ export default function Entrevistas() {
                 allowFullScreen
               />
             </div>
-            <h2 className="text-center text-xl text-white">{e.titulo}</h2>
+            <h2 className="text-center text-xl text-[#35145F]">{e.titulo}</h2>
           </article>
         ))}
       </div>
